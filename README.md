@@ -3,12 +3,20 @@ es un programa apenas voy empezando y el programas es que ingrese varia cantidad
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
+#include <stdlib.h>
 #include <string.h>
-struct alumnos 
-{
+void lineas (){
+int i ;
+for (i=0;i<20;i++){
+    printf ("...");
+
+
+}
+}
+struct alumnos {
 int edad ;
 int   promedio ;
-char nombre [50];
+char nombre [10];
 };
 int main (){
 struct  alumnos t;
@@ -18,58 +26,43 @@ printf ("\n menu max alumnos 50 \n");
 printf  ("1 agregar alumno \n");
 printf (" 2 buscar alumno \n");
 printf (" 3  sacar promedio \n");
-printf (" 4 hacer un triangulo de pascal  \n");
-printf (" 5 salir del menu  \n");
+printf (" 4 salir del menu  \n");
 scanf ("%d",&opcion);
 if (opcion==1){
-printf ("ingresa el nombre del alumno \n");
+printf("ingresa el nombre del alumno ");
 scanf ("%s",&t.nombre);
-printf ("ingresa su edad \n");
+printf ("ingresa su edad ");
 scanf ("%d",&t.edad);
-printf ("ingresa su calificacion \n");
+printf ("ingresa su promedio");
 scanf ("%d",&t.promedio);
+total++;
+total++;
+total++;
 }
 if (opcion==2){
-printf ("ingresa el nombre del alumno \n");
-scanf ("%s",&t.nombre);
-printf ("alumno:%s edad %d promedio %d\n",t.nombre,t.edad,t.promedio);
-if (t.nombre > 0 ){
-    printf ("ingresa un nombre profavor no juegues ");
-}
-}
-if (opcion == 3 ){
-    printf ("ingresa el nombre del alumno\n ");
+    printf ("ingresa el nombre del alumno ");
     scanf ("%s",&t.nombre);
-    printf ("ingresa su promedio nuevo\n ");
+    printf ("nombre: %s edad:%d promedio:%d",t.nombre,t.edad,t.promedio);
+    total ++;
+} 
+if (opcion ==3 ){
+   
+    printf ("ingresa el nombre de tu alumno ");
+    scanf ("%s",&t.nombre);
+    printf ("ingresa el promedio de tu alumno ");
     scanf ("%d",&t.promedio);
-    if (t.promedio > 6 ){
-        printf ("wow veo que paso tu alumno el parcial \n");
+    if (t.promedio>6){
+        printf ("wow  tu alumno paso el parcial ");
     }
-    else {
-        printf ("tu alumno no a pasado :(\n");
-    }
+else {
+    printf ("tu alumno no paso el parcial :(");
 }
-
-if (opcion == 4){
-  int n;
-    printf("Ingresa el número de filas del Triángulo de Pascal: ");
-    scanf("%d", &n);
-
-    pascal(n);
-
-
 }
-
-if (opcion==5){
-    printf ("saliedoooo............\n");
-    printf ("opcion valida regresa cuando me ocupes ");
+if (opcion == 4 ){
+    printf("espere validandoo............");
+    printf ("saliedo.............");
+lineas ();
 }
-if (opcion>6){
-    printf ("no jueges porfavor ingresa los numeros que se te indican ");
-}
-
-}while (opcion!=5);
-
-
+}while(opcion!=4);
 return 0 ; 
 }
